@@ -17,6 +17,8 @@ export async function POST(req: Request) {
         parameters: z.object({
           location: z.string().describe('The location to get the weather for'),
         }),
+       
+        
         execute: async ({ location }) => {
           const temperature = Math.round(Math.random() * (90 - 32) + 32);
           return {
